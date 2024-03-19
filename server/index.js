@@ -9,7 +9,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: 'http://localhost:5173', // Altere para o domínio do seu frontend
+  origin: 'https://system-sign.vercel.app', // Altere para o domínio do seu frontend
   credentials: true, // Habilitar credenciais
   optionsSuccessStatus: 200 // Alguns navegadores antigos interpretam erroneamente as respostas como inválidas, portanto, precisamos de uma configuração adicional para lidar com isso
 };
