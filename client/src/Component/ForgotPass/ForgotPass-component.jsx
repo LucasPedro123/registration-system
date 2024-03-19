@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/auth/forgot-pass", {
+            const response = await axios.post("https://system-sign.onrender.com/auth/forgot-pass", {
                 email,
             });
             console.log(response.data); // Mensagem de sucesso do servidor

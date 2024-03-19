@@ -13,7 +13,7 @@ function Signup() {
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/auth/signup", {
+            const response = await axios.post("https://system-sign.onrender.com/auth/signup", {
                 username,
                 email,
                 password

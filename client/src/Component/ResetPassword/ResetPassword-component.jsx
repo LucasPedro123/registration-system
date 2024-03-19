@@ -13,7 +13,7 @@ const ResetPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/auth/reset-password", {
+            const response = await axios.post("https://system-sign.onrender.com/auth/reset-password", {
                 token, // Envie o token como parte do corpo da solicitação
                 password,
             });

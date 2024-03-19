@@ -8,7 +8,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/auth/verify')
+    axios.get('https://system-sign.onrender.com/auth/verify')
       .then(res => {
         if (res.data.status == true) {
           console.log('Check')
