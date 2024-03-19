@@ -9,11 +9,12 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Altere para o domínio do seu frontend
-    optionsSuccessStatus: 200 // Alguns navegadores antigos (IE11) interpretam erroneamente as respostas como inválidas, portanto, precisamos de uma configuração adicional para lidar com isso
-  };
-  
-  app.use(cors(corsOptions));
+  origin: 'http://localhost:5173', // Altere para o domínio do seu frontend
+  credentials: true, // Habilitar credenciais
+  optionsSuccessStatus: 200 // Alguns navegadores antigos interpretam erroneamente as respostas como inválidas, portanto, precisamos de uma configuração adicional para lidar com isso
+};
+
+app.use(cors(corsOptions));
   
 app.use(express.json());
 app.use(cookieParser())
