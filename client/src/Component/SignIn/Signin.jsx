@@ -54,7 +54,7 @@ function Signin() {
                 <button type="submit">Login</button>
             </form>
             <p className="forgot-password">
-                Forgot your password?
+                Forgot your password? <Link to='/forgotpassword'>here</Link>
             </p>
         </div>
     );
