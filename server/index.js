@@ -24,7 +24,7 @@ const dbPass = process.env.DB_PASS;
 
 
 // Usando as rotas definidas em userRoutes
-mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@clusterdb.a0ocqpo.mongodb.net/`).then(() => {
+mongoose.connect(`mongodb+srv://LucasPedro:YHwxIz2HsLCcbRNP@clusterdb.a0ocqpo.mongodb.net/`).then(() => {
     app.listen(3001,
         console.log("Servidor está rodando em http://localhost:3001/")
         );

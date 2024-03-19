@@ -45,7 +45,7 @@ router.post('/login', async (req, res) => {
         return res.status(400).json({ message: "Password is incorrect" });
     }
 
-    const token = jwt.sign({ email: user.email, id: user._id }, process.env.KEY, { expiresIn: '3h' });
+    const token = jwt.sign({ email: user.email, id: user._id }, 'YHwxIz2HsLCcbRNP', { expiresIn: '3h' });
 
     res.cookie('token', token, { maxAge: 360000 });
     return res.json({ status: true, message: "Login successfully" });
@@ -61,7 +61,7 @@ router.post('/forgot-pass', async (req, res) => {
             return res.status(400).json({ message: "User not registered" });
         }
 
-        const token = jwt.sign({ id: user._id }, process.env.KEY, { expiresIn: '5m' });
+        const token = jwt.sign({ id: user._id },"YHwxIz2HsLCcbRNP", { expiresIn: '5m' });
 
         console.log(user._id)
 
@@ -100,7 +100,7 @@ router.post('/forgot-pass', async (req, res) => {
 router.post('/reset-password', async (req, res) => {
     const { password, token } = req.body;
     try {
-        const decoded = jwt.verify(token, process.env.KEY);
+        const decoded = jwt.verify(token, "YHwxIz2HsLCcbRNP");
         const userId = decoded.id;
 
         const hashpassword = await bcrypt.hash(password, 10);

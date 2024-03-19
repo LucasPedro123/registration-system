@@ -12,7 +12,7 @@ const verifyUser = async (req, res, next) => {
             return res.json({ status: false, message: "Not authorized" });
         }
 
-        const decoded = await jwt.verify(token, process.env.KEY);
+        const decoded = await jwt.verify(token, "YHwxIz2HsLCcbRNP");
         // Prossiga
         next();
     } catch {
