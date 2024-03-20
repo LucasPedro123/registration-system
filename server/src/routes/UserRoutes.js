@@ -47,9 +47,12 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign({ email: user.email, id: user._id }, 'YHwxIz2HsLCcbRNP', { expiresIn: '3h' });
 
-    res.cookie('token', token, { maxAge: 360000 });
+    // Configurando o cookie com o token JWT
+    res.cookie('token', token, { maxAge: 3 * 60 * 60 * 1000, httpOnly: true }); // maxAge é definido em milissegundos (3 horas)
+
     return res.json({ status: true, message: "Login successfully" });
 });
+
 
 // Enviará E-mail com jwt para poder alterar a senha
 router.post('/forgot-pass', async (req, res) => {
@@ -77,7 +80,7 @@ router.post('/forgot-pass', async (req, res) => {
             from: 'lucaspedrofernandes@gmail.com',
             to: email,
             subject: 'Reset password',
-            text: `http://localhost:5173/resetpassword/${token}`
+            text: `https://system-sign.vercel.app/resetpassword/${token}`
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
