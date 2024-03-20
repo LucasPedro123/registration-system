@@ -87,7 +87,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 
 <p align="start">
 
-   **Feito por**: [Seu Nome](https://github.com/seu-usuario).<br>
+   **Feito por**: [Lucas Pedro]([https://github.com/seu-usuario](https://github.com/LucasPedro123)).<br>
 
   Se gostou, não esqueça de deixar uma ⭐️ ou entrar em contato conosco!
 
