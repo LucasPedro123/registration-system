@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './ResetPassword-style.css';
+import Header from '../Header/Header-component';
 
 const ResetPassword = () => {
     const [password, setPassword] = useState('');
@@ -27,24 +28,23 @@ const ResetPassword = () => {
     };
 
     return (
-        <div className="forgot-password-container">
-            <h2>Resetar a Senha</h2>
-            {message && <p className="success-message">{message}</p>}
-            {error && <p className="error-message">{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="password">Nova Senha</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+        <>
+            <Header />
+            <div className="forgot-password-container">
+
+                <h2>Resetar a Senha</h2>
+                {message && <p className="success-message">{message}</p>}
+                {error && <p className="error-message">{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div className="input-box">
+                        <i className="fa-solid fa-lock-keyhole"></i>
+                        <input id="pass" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                        <label htmlFor="pass">Senha</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </>
     );
 };
 

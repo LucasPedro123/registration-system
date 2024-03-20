@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
 import './Forgot-style.css'
+import Header from '../Header/Header-component';
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +11,10 @@ const ForgotPassword = () => {
     const [error, setError] = useState('');
 
     const Navigate = useNavigate();
+
+    const handleBack = () => {
+        Navigate('/')
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,24 +31,25 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="forgot-password-container">
-            <h2>Esqueci a Senha</h2>
-            {message && <p className="success-message">{message}</p>}
-            {error && <p className="error-message">{error}</p>}
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+        <>
+            <Header/>
+            <div className="forgot-password-container" data-aos="flip-left">
+                <div className='iconBack'> 
+                    <i class="fa-solid fa-arrow-left" onClick={handleBack}></i>
                 </div>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+                <h2>Esqueci a Senha</h2>
+                {message && <p className="success-message">{message}</p>}
+                {error && <p className="error-message">{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <div className="input-box">
+                        <i className="fa-solid fa-envelope"></i>
+                        <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <label htmlFor="email">Email</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </>
     );
 };
 

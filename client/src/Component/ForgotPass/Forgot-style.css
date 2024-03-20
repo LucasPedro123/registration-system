@@ -2,9 +2,13 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    color: #fff;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 60px 6px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: transparent;
 }
 
 .forgot-password-container h2 {
@@ -34,14 +38,16 @@ button {
     padding: 10px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #162938;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.7s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #162938;
+    transform: scale(1.1);
 }
 
 .success-message {
@@ -50,4 +56,9 @@ button:hover {
 
 .error-message {
     color: #dc3545;
+}
+
+.iconBack i{
+    cursor: pointer;
+    font-size: 1.3em;
 }

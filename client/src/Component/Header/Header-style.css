@@ -1,0 +1,86 @@
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 900;
+    user-select: none;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+.btnLogin-popp{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btnLogin-popp:hover{
+    background-color: #fff;
+    color: #162938;
+}
+
+/* Media queries para tornar o cabeçalho mais responsivo */
+@media screen and (max-width: 768px) {
+    .navigation a{
+        
+        display: none; /* Ocultar o menu de navegação em telas menores */
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btnLogin-popp {
+        padding: 0px 0px; /* Adicionar padding para melhorar a usabilidade em telas menores */
+    }
+}
+
+

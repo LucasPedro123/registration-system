@@ -1,0 +1,189 @@
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 60px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: height 0.1s ease;
+    transition: 0.5s;
+}
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.wrapper .form-box.login{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper.active{
+    height: 520px;
+}
+.wrapper .form-box.register{
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transform: translateX(400px);
+}
+.form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+.form-box h2{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff ;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box i{
+    position: absolute;
+    right: 8px;
+    font-size: 1.3em;
+    line-height: 57px;
+    color: #fff;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-left: 3px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: #162938;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    font-weight: 1000;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btnClose-popp {
+     /* Defina os estilos personalizados aqui */
+     border: none; /* Remove a borda */
+     background-color: transparent; /* Remove a cor de fundo */
+     color: inherit; /* Mantém a cor do texto padrão */
+     font-size: inherit; /* Mantém o tamanho da fonte padrão */
+     cursor: pointer; /* Adiciona um cursor do tipo ponteiro para indicar clicabilidade */
+     /* Adicione mais estilos conforme necessário */
+     position: absolute;
+    top: 0;
+    right: 0;
+    i{
+        z-index: 99;
+    }
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
