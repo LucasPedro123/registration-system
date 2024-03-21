@@ -3,7 +3,7 @@
 
 <!-- Descrição -->
 <p align="center">
-  🚀 Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 🎉
+   Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 🚀
 </p>
 
 <p align="center">
