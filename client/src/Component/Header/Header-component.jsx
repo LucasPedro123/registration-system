@@ -1,5 +1,5 @@
 import './Header-style.css';
-import Logo from '../../assets/Img/logo.png'
+import Logo from '../../assets/Img/Logo.png'
 import React, { useState, useContext } from 'react';
 
 import MyContext  from '../../Context/ContextState'; // Importa o contexto
