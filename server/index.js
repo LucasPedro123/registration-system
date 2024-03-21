@@ -15,14 +15,15 @@ const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
 
 // Configuração do CORS
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
+const corsOptions = {
+  origin: 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app',
+  methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+};
 
+// Configuração do CORS
 app.use(cors(corsOptions));
+
 
 // Usando as rotas definidas em userRoutes
 mongoose.connect(`mongodb+srv://LucasPedro:YHwxIz2HsLCcbRNP@clusterdb.a0ocqpo.mongodb.net`)
