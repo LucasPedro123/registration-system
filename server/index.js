@@ -16,7 +16,7 @@ const dbPass = process.env.DB_PASS;
 
 // Configuração do CORS
 const corsOptions = {
-  origin: 'https://client-seven-ashy.vercel.app/',
+  origin: 'https://client-seven-ashy.vercel.app',
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
   credentials: true // Permitir credenciais
@@ -25,9 +25,6 @@ const corsOptions = {
 // Configuração do CORS
 app.use(cors(corsOptions));
 
-
-// Configuração do CORS
-app.use(cors(corsOptions));
 
 
 // Usando as rotas definidas em userRoutes
