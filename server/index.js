@@ -16,7 +16,7 @@ const dbPass = process.env.DB_PASS;
 
 // Configuração do CORS
 const corsOptions = {
-  origin: 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app',
+  origin: 'https://client-seven-ashy.vercel.app/',
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
   credentials: true // Permitir credenciais
