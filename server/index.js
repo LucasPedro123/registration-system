@@ -18,8 +18,13 @@ const dbPass = process.env.DB_PASS;
 const corsOptions = {
   origin: 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app',
   methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
+  credentials: true // Permitir credenciais
 };
+
+// Configuração do CORS
+app.use(cors(corsOptions));
+
 
 // Configuração do CORS
 app.use(cors(corsOptions));
