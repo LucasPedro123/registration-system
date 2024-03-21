@@ -1,8 +1,8 @@
 {
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
+      { "source": "/home", "destination": "/index.html" },
+      { "source": "/forgotpassword", "destination": "/index.html" },
+      { "source": "/resetpassword/:token", "destination": "/index.html" },
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
-}
+  }

@@ -17,7 +17,7 @@ function Header() {
         <header>
             <Link to='/'><img src={Logo} width="80px" alt=""/></Link>
             <nav class="navigation">
-                <a href="/Home">Home</a>
+                <Link to="/home">Home</Link>
                 <a href="#">Sobre</a>
                 <a href="#">Serviços</a>
                 <a href="#">Contatos</a>
