@@ -1,9 +1,9 @@
 <!-- Título -->
-<h1 align="center">🚀 Bem-vindo ao Sistema de Autenticação! 🚀</h1>
+<h1 align="center">🚘 Bem-vindo ao Sistema de Autenticação! 🚦</h1>
 
 <!-- Descrição -->
 <p align="center">
-  Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 🎉
+  🚀 Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 🎉
 </p>
 
 <p align="center">
@@ -41,6 +41,7 @@ Este sistema oferece funcionalidades básicas de registro e login de usuários. 
 - **Validação de Entrada**: Realiza validação de entrada no servidor para garantir que os dados fornecidos sejam válidos.
 - **Exibição de Mensagens de Erro**: Exibe mensagens de erro ao usuário em caso de falha no registro ou login.
 - **Interface de Usuário Responsiva**: A interface de usuário é responsiva e se adapta a diferentes tamanhos de tela.
+- **Envia redefinição de senha no E-mail**:  O sistema permite que usuários alterem suas senhas com garantias de controle e segurança.
 
 <!-- Como Rodar -->
 ## 🚀 Como Rodar o Projeto
