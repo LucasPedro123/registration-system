@@ -17,10 +17,10 @@ function Header() {
         <header>
             <Link to='/'><img src={Logo} width="80px" alt=""/></Link>
             <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="/Home">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contatos</a>
                 <button className="btnLogin-popp" onClick={handlePopupButtonClick}>Login</button>
             </nav>
         </header>

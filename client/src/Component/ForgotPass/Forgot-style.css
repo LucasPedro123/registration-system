@@ -62,3 +62,20 @@ button:hover {
     cursor: pointer;
     font-size: 1.3em;
 }
+
+.success-animation {
+    color: green; /* Cor da animação de sucesso */
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    animation: fadeOut 2s forwards; /* Animação de desaparecimento após 2 segundos */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

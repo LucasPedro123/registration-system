@@ -5,14 +5,14 @@ import axios from 'axios';
 import Header from '../Header/Header-component';
 
 
-function Home() {
+function Main() {
   const navigate = useNavigate();
 
   useEffect(() => {
     // Configura o Axios para enviar cookies com todas as solicitações
     axios.defaults.withCredentials = true;
 
-    axios.get('https://system-sign.onrender.com/auth/auth/verify')
+    axios.get('https://system-sign.onrender.com/auth/verify')
       .then(res => {
         if (res.data.status === true) {
           console.log('Usuário autenticado');
@@ -36,4 +36,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Main;

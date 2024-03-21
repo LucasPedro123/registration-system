@@ -20,7 +20,7 @@ const ResetPassword = () => {
             });
             console.log(response.data);
             setMessage(response.data.message);
-            navigate('/login');
+            navigate('/');
         } catch (error) {
             console.error(error);
             setError('Erro ao tentar redefinir a senha. Verifique sua conexão de rede e tente novamente.');

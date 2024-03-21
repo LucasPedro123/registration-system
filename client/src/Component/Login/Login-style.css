@@ -187,3 +187,16 @@
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+.error-message {
+    color: white;
+    background-color: rgba(154, 21, 21, 0.667); /* Vermelho mais suave */
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px 20px; /* Adiciona um espaço interno para melhor legibilidade */
+    border-radius: 5px; /* Borda arredondada */
+    text-align: center; /* Centraliza o texto */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+
