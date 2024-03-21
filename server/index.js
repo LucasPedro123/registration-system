@@ -15,11 +15,12 @@ const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
 
 // Configuração do CORS
-const corsOptions = {
-  origin: 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app/', // domínio do seu frontend
-  credentials: true, // Habilitar credenciais
-  optionsSuccessStatus: 200 // Alguns navegadores antigos interpretam erroneamente as respostas como inválidas, portanto, precisamos de uma configuração adicional para lidar com isso
-};
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://client-eyya7qevm-lucas-projects-18aea052.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 app.use(cors(corsOptions));
 
