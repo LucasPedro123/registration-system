@@ -11,9 +11,16 @@ router.post('/signup', async (req, res) => {
     const { username, email, password } = req.body;
 
     try {
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(400).json({ message: "User already exists" });
+        const existingUserEmail = await User.findOne({ email });
+        const existingUserName = await User.findOne({ username });
+
+
+        if (existingUserName) {
+            return res.status(400).json({ message: "Name User already exists" });
+            
+        }
+        if (existingUserEmail) {
+            return res.status(400).json({ message: "Email User already exists" });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -37,12 +44,12 @@ router.post('/login', async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-        return res.status(400).json({ message: "User is not registered" });
+        return res.status(400).json({ message: "Usuário não registrado." });
     }
 
     const validPassword = await bcrypt.compare(password, user.password);
     if (!validPassword) {
-        return res.status(400).json({ message: "Password is incorrect" });
+        return res.status(400).json({ message: "Senha incorreta" });
     }
 
     const token = jwt.sign({ email: user.email, id: user._id }, 'YHwxIz2HsLCcbRNP', { expiresIn: '3h' });
@@ -89,7 +96,7 @@ router.post('/forgot-pass', async (req, res) => {
                 return res.status(500).json({ message: "Error sending email" });
             } else {
                 console.log('Email sent: ' + info.response);
-                return res.json({ message: "Email sent successfully", id: user._id });
+                return res.json({ message: "Email enviado com sucesso!", id: user._id });
             }
         });
     } catch (e) {
