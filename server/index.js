@@ -16,11 +16,10 @@ const dbPass = process.env.DB_PASS;
 
 // Configuração do CORS
 const corsOptions = {
-  origin: 'http://localhost:5173',
-  credentials: true,
-  optionsSuccessStatus: 200
+  origin: 'https://system-sign.vercel.app', // domínio do seu frontend
+  credentials: true, // Habilitar credenciais
+  optionsSuccessStatus: 200 // Alguns navegadores antigos interpretam erroneamente as respostas como inválidas, portanto, precisamos de uma configuração adicional para lidar com isso
 };
-
 
 app.use(cors(corsOptions));
 
