@@ -6,9 +6,11 @@ const MyContext = createContext();
 // Crie o provedor de contexto
 export const MyProvider = ({ children }) => {
     const [isPopupActive, setIsPopupActive] = useState(false);
+    const [authorizedLogin, setAuthorizedLogin] = useState(false);
+
 
     return (
-        <MyContext.Provider value={{ isPopupActive, setIsPopupActive }}>
+        <MyContext.Provider value={{ isPopupActive, setIsPopupActive, authorizedLogin, setAuthorizedLogin }}>
             {children}
         </MyContext.Provider>
     );

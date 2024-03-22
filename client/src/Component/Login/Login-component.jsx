@@ -6,7 +6,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
     const [isActive, setIsActive] = useState(false);
-    const { isPopupActive, setIsPopupActive } = useContext(MyContext);
+
+    const { isPopupActive, setIsPopupActive, setAuthorizedLogin  } = useContext(MyContext);
+
+
+
     const [error, setError] = useState(''); // Defina a variável de erro usando useState
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -37,6 +41,7 @@ function Login() {
                 email,
                 password
             });
+            setAuthorizedLogin(true);
             setIsActive(false)
             setMessage(response.data.message)
             console.log(response.data); // Mensagem de sucesso do servidor
