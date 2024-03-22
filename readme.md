@@ -3,7 +3,7 @@
 
 <!-- Descrição -->
 <p align="center">
-   Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 🚀
+   Bem-vindo ao Sistema de Autenticação! Aqui você poderá registrar e fazer login de usuários de forma simples e eficaz. 
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Este sistema oferece funcionalidades básicas de registro e login de usuários. 
 1. **Clone o Repositório**:
 
     ```bash
-    git clone https://github.com/LucasPedro123/system-sign
+    git clone https://github.com/LucasPedro123/registration-system
     ```
 
 2. **Navegue até o diretório client**:
